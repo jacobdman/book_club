@@ -8,11 +8,13 @@ import Drawer from "UI/Drawer";
 import Button from "UI/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import { useTheme } from "@mui/material";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
 
 const NavBar = ({ window }) => {
+  const theme = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -24,7 +26,16 @@ const NavBar = ({ window }) => {
 
   return (
     <Box>
-      <AppBar component="nav">
+      <AppBar
+        component="nav"
+        color="secondary"
+        sx={{
+          height: theme.appBarHeight,
+          display: "flex",
+          // alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -49,10 +60,14 @@ const NavBar = ({ window }) => {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button
+                key={item}
+                sx={{ color: theme.palette.secondary.contrastText }}
+              >
                 {item}
               </Button>
             ))}
+            <Button variant="contained">Login</Button>
           </Box>
         </Toolbar>
       </AppBar>
