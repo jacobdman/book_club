@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material";
 
 const useStyles = (theme) => ({
   childrenContainer: {
-    paddingTop: theme.appBarHeight,
+    paddingTop: `calc(${theme.appBarHeight} + ${theme.spacing(1)})`,
     // paddingBottom: isMobile ? theme.paddingBelowAppBar : 0,
     maxWidth: "100vw",
     height: "calc(100vh)",

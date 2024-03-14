@@ -4,21 +4,21 @@ import { CssBaseline } from "@mui/material";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#AD1457",
+      main: "#ffa726",
     },
     secondary: {
-      main: "#ffd54f",
+      main: "#b2ebf2",
     },
     background: {
-      default: "#efebe9",
+      default: "#fff8e180",
       paper: "#fafafa",
     },
   },
   shape: {
-    borderRadius: 12,
+    borderRadius: 4,
   },
   spacing: 4,
-  appBarHeight: 12,
+  appBarHeight: "45px",
 });
 
 const BaseThemeProvider = ({ children }) => {
