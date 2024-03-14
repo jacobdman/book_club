@@ -1,14 +1,15 @@
 // LAYOUTS
-// import DefaultLayout from 'layouts/DefaultLayout';
+import DefaultLayout from "layouts/DefaultLayout";
 // VIEWS
+import Home from "views/Home";
 
 const routes = [
-  // {
-  //   path: '/',
-  //   component: Search,
-  //   exact: true,
-  //   Layout: DefaultLayout,
-  // },
+  {
+    path: "/",
+    component: Home,
+    exact: true,
+    Layout: DefaultLayout,
+  },
 ];
 
 export default routes;
